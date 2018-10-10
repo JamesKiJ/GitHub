@@ -15,8 +15,6 @@ def pi(N):
     return c
 
 print(pi(1000))
-print(pi(100))
-print(pi(100000))
 
 
 
