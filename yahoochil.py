@@ -32,6 +32,6 @@ def parseXML(xml_self):
 URL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=xml'
 with request.urlopen(URL,timeout=4) as res:
     data =res.read()
-result =parseXML(data.decode('utf-8'))
+    result =parseXML(data.decode('utf-8'))
 assert request['city'] == 'Beijing'
 

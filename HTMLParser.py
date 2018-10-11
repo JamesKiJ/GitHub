@@ -31,3 +31,4 @@ parser.feed('''<html>
 <!-- test html parser -->
     <p>Some <a href=\"#\">html</a> HTML&nbsp;tutorial...<br>END</p>
 </body></html>''')
+

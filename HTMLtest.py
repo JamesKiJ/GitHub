@@ -1,5 +1,6 @@
 from html.parser import HTMLParser
 from urllib import request
+import requests
 import re
 
 
@@ -51,9 +52,6 @@ def getinfo(data,u):            #定义如何显示数据
             print('-----------------------')
 
 web ='https://www.python.org/events/python-events/'     #输入网址
-with request.urlopen(web) as res:
-    data1 = res.read()
-    data1 =data1.decode('utf-8')
-
-getinfo(data1,web)
+with requests.get(web) as res:
+    getinfo(res,web)
 

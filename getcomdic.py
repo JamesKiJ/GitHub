@@ -1,13 +1,13 @@
 import requests,bs4,os
 
-url = 'http://www.xkcd.com'
+url = 'http://docs.python-requests.org/zh_CN/latest/index.html#'
 os.makedirs('xkcd',exist_ok=True)
 while not url.endswith('#'):
     print('Downloading page %s...'%url)
     res =requests.get(url)
     res.raise_for_status()
     soup =bs4.BeautifulSoup(res.text)
-    comicElem =soup.select('#comic img')
+    comicElem =soup.select('img [class = "logo"]')
     if comicElem ==[]:
         print('Could you find comic image...')
     else:
